@@ -1,0 +1,19 @@
+{
+  "name": "pikachuny31",
+  "version": "1.0.0",
+  "description": "Reinforcement Project Team Pikachu NY-31",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PikachuNY31/PikachuNY31.git"
+  },
+  "author": "Adam, Eric R, Leo, Mark, Michael L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PikachuNY31/PikachuNY31/issues"
+  },
+  "homepage": "https://github.com/PikachuNY31/PikachuNY31#readme"
+}
