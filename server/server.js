@@ -1,10 +1,13 @@
 // server boilerplate will go here
 const express = require('express');
+
 const app = express();
 
 const path = require('path');
 
 const cookieParser = require('cookie-parser');
+
+const notesController = require('./controllers/notesController');
 
 // app.use();
 app.use(express.json());
@@ -20,22 +23,24 @@ app.get('/store/main', (req, res) => {
         author: 'Leo',
         description: 'This is a descriptions for the Redux notes',
         price: 2.99,
-        discountPercent: 0.75
+        discountPercent: 0.75,
       },
       {
         noteTitle: 'Express',
         author: 'Eric',
         description: 'This is a description for the Express notes',
         price: 2.99,
-        discountPercent: 0.00
+        discountPercent: 0.0,
       },
     ],
-    storePrompts: [
-      'Example Store Prompt 1',
-      'Example Store Prompt 2',
-    ],
-  })
-})
+    storePrompts: ['Example Store Prompt 1', 'Example Store Prompt 2'],
+  });
+});
+
+app.get('/notes', notesController.getAllNotes, (req, res) => {
+  res.send(res.locals.notes);
+});
+
 // global error handler
 app.use((err, req, res, next) => {
   const defaultErr = {

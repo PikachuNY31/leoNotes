@@ -13,7 +13,8 @@ CREATE TABLE notes (
   _id SERIAL NOT NULL PRIMARY KEY,
   note_title VARCHAR(255),
   price FLOAT,
-  discount_percent FLOAT
+  discount_percent FLOAT,
+  description TEXT
 )
 
 CREATE TABLE transactions (
