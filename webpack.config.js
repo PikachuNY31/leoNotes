@@ -82,11 +82,6 @@ module.exports = {
         target: 'http://localhost:3000/',
         secure: false,
       },
-      // for managing the oauth route
-      '/oauth/*': {
-        target: 'http://localhost:3000/',
-        secure: false,
-      },
     },
   },
   // Enable importing JS / JSX files without specifying their extension
