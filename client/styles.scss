@@ -1,0 +1,261 @@
+html,
+body {
+    margin: 0;
+}
+
+// .NoteContainer {
+//     // display: flex;
+//     // flex-wrap: wrap;
+// }
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.section-tours {
+    // display: flex;
+    background-color: lightgrey;
+    padding: 25rem 0 15rem 0;
+    margin-top: -10rem;
+
+    // @include respond(tab-port) {
+    //     padding: 20rem 0 10rem 0;
+    // }
+}
+
+.card {
+    //FUNCTIONALITY
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+    position: relative;
+    height: 26rem;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+
+
+    &__side {
+        height: 26rem;
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem black;
+        // align-items: center;
+        // justify-content: center;
+
+        &--front {
+            background-color: white;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom,
+                        blue,
+                        lightblue);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom,
+                        green,
+                        lightgreen);
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom,
+                        yellow,
+                        lightyellow);
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    //FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+                    darkblue,
+                    lightblue),
+                // url(../img/nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+                    green,
+                    lightgreen),
+                // url(../img/nat-6.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+                    yellow,
+                    lightyellow),
+                // url(../img/nat-7.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        position: absolute;
+        // margin: 0 auto;
+        top: 2rem;
+        left: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+                    rgba(blue, 0.85),
+                    rgba(lightblue, 0.85));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+                    rgba(green, 0.85),
+                    rgba(lightgreen, 0.85));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+                    rgba(yellow, 0.85),
+                    rgba(lightyellow, 0.85));
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+        position: absolute;
+        bottom: 2rem;
+
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid lightgrey;
+                }
+            }
+        }
+    }
+
+    //BACK SIDE STYLING
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+    //MEDIA QUERY REDESIGN
+
+    // @include respond(tab-port) {
+    @media only screen and (max-width: 56.25em),
+    only screen and (hover: none) {
+        //FUNCTIONALITY
+        height: auto;
+        border-radius: 3px;
+        background-color: white;
+        box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        &:hover &__side--front {
+            transform: rotateY(0);
+        }
+
+        &__details {
+            padding: 1rem 3rem;
+        }
+
+        //BACK SIDE STYLING
+        &__cta {
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__price-value {
+            font-size: 4rem;
+        }
+    }
+}
+
+// .card__side {
+//     margin: 2rem;
+//     // padding: 5rem;
+// }
