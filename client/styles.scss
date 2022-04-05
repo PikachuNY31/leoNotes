@@ -3,6 +3,13 @@
     // flex-wrap: wrap;
 }
 
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .section-tours {
     // display: flex;
     background-color: lightgrey;
@@ -19,16 +26,17 @@
     -moz-perspective: 150rem;
     perspective: 150rem;
     position: relative;
-    height: 52rem;
+    height: 26rem;
     width: 30%;
 
+
     &__side {
-        height: 52rem;
+        height: 26rem;
         transition: all 0.8s ease;
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 80%;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
@@ -233,3 +241,8 @@
         }
     }
 }
+
+// .card__side {
+//     margin: 2rem;
+//     // padding: 5rem;
+// }

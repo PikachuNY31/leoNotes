@@ -15,9 +15,9 @@ function NoteContainer() {
                     <NoteCard name={'React'} description={'These are notes about React'} price={'100'} />
                     <NoteCard name={'Redux'} description={'These are notes about Redux'} price={'200'} />
                     <NoteCard name={'Express'} description={'These are notes about Express'} price={'500'} />
-                    <div class="u-center-text u-margin-top-huge">
+                    {/* <div class="u-center-text u-margin-top-huge">
                         <a href="#" class="btn btn--green">Discover all tours</a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </div>
