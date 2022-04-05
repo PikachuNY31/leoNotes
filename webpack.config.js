@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.s?css/,
         // exclude: /node_module/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader'],
       },
       // Font and SVGs
       {
