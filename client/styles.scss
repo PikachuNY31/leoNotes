@@ -1,7 +1,12 @@
-.NoteContainer {
-    // display: flex;
-    // flex-wrap: wrap;
+html,
+body {
+    margin: 0;
 }
+
+// .NoteContainer {
+//     // display: flex;
+//     // flex-wrap: wrap;
+// }
 
 .row {
     display: flex;
@@ -28,6 +33,8 @@
     position: relative;
     height: 26rem;
     width: 30%;
+    align-items: center;
+    justify-content: center;
 
 
     &__side {
@@ -42,6 +49,8 @@
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem black;
+        // align-items: center;
+        // justify-content: center;
 
         &--front {
             background-color: white;
@@ -114,11 +123,12 @@
         font-size: 2.8rem;
         font-weight: 300;
         text-transform: uppercase;
-        text-align: right;
+        text-align: center;
         color: white;
         position: absolute;
-        top: 12rem;
-        right: 2rem;
+        // margin: 0 auto;
+        top: 2rem;
+        left: 2rem;
         width: 75%;
     }
 
@@ -148,6 +158,9 @@
 
     &__details {
         padding: 3rem;
+        position: absolute;
+        bottom: 2rem;
+
 
         ul {
             list-style: none;
