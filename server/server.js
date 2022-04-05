@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 
 // app.use();
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // require routers
@@ -25,11 +25,10 @@ app.use((err, req, res, next) => {
   return res.status(errorObj.status).json(errorObj.message);
 });
 
-const PORT = 8080;
+const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log('================================ \n');
   console.log(`SERVER RUNNING ON PORT: ${PORT}`);
   console.log(' \n================================');
-})
-
+});
