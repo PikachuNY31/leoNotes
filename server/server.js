@@ -12,7 +12,30 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // require routers
-
+app.get('/store/main', (req, res) => {
+  res.status(200).json({
+    notesForSale: [
+      {
+        noteTitle: 'Redux',
+        author: 'Leo',
+        description: 'This is a descriptions for the Redux notes',
+        price: 2.99,
+        discountPercent: 0.75
+      },
+      {
+        noteTitle: 'Express',
+        author: 'Eric',
+        description: 'This is a description for the Express notes',
+        price: 2.99,
+        discountPercent: 0.00
+      },
+    ],
+    storePrompts: [
+      'Example Store Prompt 1',
+      'Example Store Prompt 2',
+    ],
+  })
+})
 // global error handler
 app.use((err, req, res, next) => {
   const defaultErr = {
