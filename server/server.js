@@ -19,42 +19,26 @@ app.use(cookieParser());
 
 app.get('/', (req, res) => {
   res.sendStatus(200);
-})
-
-app.get('/store/main', (req, res) => {
-  res.status(200).json({
-    notesForSale: [
-      {
-        noteTitle: 'Redux',
-        author: 'Leo',
-        description: 'This is a descriptions for the Redux notes',
-        price: 2.99,
-        discountPercent: 0.75,
-      },
-      {
-        noteTitle: 'Express',
-        author: 'Eric',
-        description: 'This is a description for the Express notes',
-        price: 2.99,
-        discountPercent: 0.0,
-      },
-    ],
-    storePrompts: ['Example Store Prompt 1', 'Example Store Prompt 2'],
-  });
 });
-
 
 app.get('/notes', notesController.getAllNotes, (req, res) => {
   res.send(res.locals.notes);
 });
 
+app.get('/user/login', userController.authenticateUser, (req, res) => {
+  console.log(res.locals.isAuthenticated);
+  res.status(200).json({
+    isAuthenticated: res.locals.isAuthenticated,
+  });
+});
+
 app.post('/user/signup', userController.createUser, (req, res) => {
   const newUser = {
     createdAccount: true,
-    message: 'Example Welcome!'
+    message: 'Example Welcome!',
   };
-    res.status(200).json(newUser);
-})
+  res.status(200).json(newUser);
+});
 
 // global error handler
 app.use((err, req, res, next) => {
@@ -67,8 +51,6 @@ app.use((err, req, res, next) => {
   console.log(errorObj.log);
   return res.status(errorObj.status).json(errorObj.message);
 });
-
-
 
 const PORT = 3000;
 
