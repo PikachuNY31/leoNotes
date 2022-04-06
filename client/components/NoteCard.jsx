@@ -2,10 +2,7 @@ import React from 'react';
 
 function NoteCard(props) {
 
-
     return (
-
-
 
         <div class="card">
             <div class="card__side card__side--front">
@@ -29,7 +26,9 @@ function NoteCard(props) {
                         </p>
                         <p class="card__price-value">{'$' + props.price}</p>
                     </div>
-                    <button>Add to Cart!</button>
+                    <button class='btn btn--white' onClick={props.setCartToggle}>Buy Now!</button>
+                    <div> <button class='btn2 add-to-cart'>Add to Cart</button></div>
+                   
                 </div>
             </div>
         </div>

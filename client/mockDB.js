@@ -10,6 +10,11 @@ const storemain = {
         price: 2.99,
         discount_percent: 25
     },
+    {
+      note_title: 'Data Structures',
+      price: 2.99,
+      discount_percent: 25
+  }
     ],
 
     // these will be saved in an object

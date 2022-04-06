@@ -1,49 +1,61 @@
 {
-  "name": "pikachuny31",
-  "version": "1.0.0",
-  "description": "Reinforcement Project Team Pikachu NY-31",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "NODE_ENV=development nodemon server/server.js & NODE_ENV=development webpack-dev-server",
-    "start": "nodemon ./server/server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PikachuNY31/PikachuNY31.git"
-  },
-  "author": "Adam, Eric R, Leo, Mark, Michael L",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PikachuNY31/PikachuNY31/issues"
-  },
-  "homepage": "https://github.com/PikachuNY31/PikachuNY31#readme",
-  "dependencies": {
-    "@reduxjs/toolkit": "^1.8.1",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "css-loader": "^6.7.1",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "html-webpack-plugin": "^5.5.0",
-    "jsonwebtoken": "^8.5.1",
-    "pg": "^8.7.3",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-redux": "^7.2.8",
-    "sass": "^1.49.11",
-    "sass-loader": "^12.6.0",
-    "style-loader": "^3.3.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "babel-loader": "^8.2.4",
-    "nodemon": "^2.0.15",
-    "webpack": "^5.71.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4",
-    "webpack-hot-middleware": "^2.25.1"
-  }
+    "name": "leos-notes",
+    "version": "0.1",
+    "description": "",
+    "main": "server/server.js",
+    "scripts": {
+        "start": "NODE_ENV=production node server/server.js",
+        "build": "NODE_ENV=production webpack",
+        "dev": "concurrently \"NODE_ENV=development webpack serve --open\" \"nodemon server/server.js\"",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "dependencies": {
+        "@emailjs/browser": "^3.4.0",
+        "@emotion/react": "^11.7.1",
+        "@emotion/styled": "^11.6.0",
+        "@mui/icons-material": "^5.6.0",
+        "@mui/material": "^5.6.0",
+        "@mui/styles": "^5.4.1",
+        "@reduxjs/toolkit": "^1.7.2",
+        "axios": "^0.26.0",
+        "bcrypt": "^5.0.1",
+        "cors": "^2.8.5",
+        "css-loader": "^6.5.1",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.2",
+        "html-webpack-plugin": "^5.5.0",
+        "nodejs": "^0.0.0",
+        "pg": "^8.7.3",
+        "postcss-loader": "^6.2.1",
+        "react-icons": "^4.3.1",
+        "react-redux": "^7.2.6",
+        "react-router-dom": "^6.2.1",
+        "react-transition-group": "^4.4.2",
+        "style-loader": "^3.3.1",
+        "url-loader": "^4.1.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.5",
+        "@babel/plugin-transform-runtime": "^7.17.0",
+        "@babel/preset-env": "^7.16.5",
+        "@babel/preset-react": "^7.16.5",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^8.2.3",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "concurrently": "^6.5.1",
+        "eslint": "^8.5.0",
+        "file-loader": "^6.2.0",
+        "jest": "^27.5.1",
+        "nodemon": "^2.0.15",
+        "sass": "^1.45.1",
+        "sass-loader": "^12.4.0",
+        "supertest": "^6.2.2",
+        "url-loader": "^4.1.1",
+        "webpack": "^5.65.0",
+        "webpack-cli": "^4.9.1",
+        "webpack-dev-server": "^4.7.1"
+    }
 }
