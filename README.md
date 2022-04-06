@@ -1,9 +1,8 @@
 # Welcome to Leo's Notes Shop!
-### An e-commerce popup shop for where you can buy Leo's Notes
+### An e-commerce popup shop for where you can buy Leo's amazing notes
 
 * Be mesmerized by our incredible landing page!
 * Sign up and sign in using the user icon
-* Browse all the categories of products
+* Browse all the note packages
 * Add items to cart and view your cart in a sidebar using the cart icon
 * One click checkout!
-* Send a love letter to a lonely friend using the message icon on the navbar

@@ -34,7 +34,7 @@ const signUpModal =  ({setSignInModalToggle, setSignUpModalToggle}) => {
         <div id = "login-section">
           <h1 className="sign-in"> Create An Account </h1>
           <div id="sign-in-blurb">
-            <p>Welcome to Leo&apos;s Notes! It&apos;s quick and easy to set up an account.</p>
+            <p>Welcome to LeoNotes! It&apos;s quick and easy to set up an account.</p>
           </div>
           <form id="user-form">
             <div>

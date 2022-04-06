@@ -49,7 +49,7 @@ const App = () => {
       <div className='grid-container'>
         
         <header className='header'>
-          <a href="/" className="title">LEO&apos;S NOTES</a> 
+          <a href="/" className="title">LEONOTES</a> 
           <BiUserCircle className="icon" size={40} onClick={() => setSignInModalToggle(true)} style={{alignSelf: 'flex-end' , bottom: 25, position:'absolute' , right:120}}/>
           <AiOutlineShoppingCart className="icon" size={40} onClick={() => setCartToggle(true)}
             style={{alignSelf: 'flex-end' , position:'absolute' , bottom: 25, right:50 }}/> 

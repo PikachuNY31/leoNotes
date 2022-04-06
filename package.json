@@ -1,5 +1,5 @@
 {
-    "name": "leos-notes",
+    "name": "leonotes",
     "version": "0.1",
     "description": "",
     "main": "server/server.js",
@@ -20,6 +20,7 @@
         "@reduxjs/toolkit": "^1.7.2",
         "axios": "^0.26.0",
         "bcrypt": "^5.0.1",
+        "cookie-parser": "^1.4.6",
         "cors": "^2.8.5",
         "css-loader": "^6.5.1",
         "dotenv": "^16.0.0",
